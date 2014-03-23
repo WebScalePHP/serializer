@@ -7,7 +7,7 @@
 namespace WebScale\Serializer;
 
 use RuntimeException;
-use RuntimeException;
+use InvalidArgumentException;
 
 class Compressor implements SerializerInterface
 {

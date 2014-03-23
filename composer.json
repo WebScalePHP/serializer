@@ -1,0 +1,13 @@
+{
+    "name" : "webscale/serializer",
+    "type" : "library",
+    "description": "OOP abstraction of different serialization methods",
+    "homepage": "https://github.com/webscalePHP/serializer",
+    "keywords": ["serializer", "igbinary", "bson"],
+    "license" : "MIT",
+    "autoload": {
+        "psr-4": {
+            "WebScale\\Serializer\\": "lib"
+        }
+    }
+}

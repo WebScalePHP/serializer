@@ -7,6 +7,7 @@
 namespace WebScale\Serializer;
 
 use RuntimeException;
+use RuntimeException;
 
 class Compressor implements SerializerInterface
 {
@@ -19,7 +20,7 @@ class Compressor implements SerializerInterface
     /**
      * Construnctor
      *
-     * @param \WebScale\Common\Serializer\SerializerInterface $wrapped
+     * @param \WebScale\Serializer\SerializerInterface $wrapped
      * @param int $threshold
      *     Do not compress serialized values below this limit.
      * @param float $factor
@@ -56,7 +57,7 @@ class Compressor implements SerializerInterface
         } elseif ($data[0] == '0') {
             // ok
         } else {
-        
+            throw new InvalidArgumentException('Cannot parse given data');
         }
         return $this->wrapped->unserialize($data[1]);
     }
